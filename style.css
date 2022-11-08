@@ -1,0 +1,187 @@
+/*GENERAL STYLING*/
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    overflow-x: hidden;
+}
+
+/*FIRST SECTION*/
+.hero-container{
+    background-color: rgba(0, 0, 0, 0.235);
+    height:100vh;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll{
+    position:absolute;
+    left:50%;
+    bottom:10%;
+    margin-right:-50%;
+    transform: translateX(-50%);
+    width:200px;
+    display:grid;
+}
+
+h3{
+    color:white;
+    text-align: center;
+    font-family: 'Prata', serif;
+    font-size:20px;
+    padding:1rem;
+    margin:0;
+}
+
+.arrow-container{
+    display:grid;
+    justify-content: center;
+    animation: arrow 1s ease infinite;
+    opacity:0;
+}
+
+.arrow{
+    width:30px;
+}
+
+@keyframes arrow{
+    0% {
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity:1
+    }
+}
+
+video { 
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit:cover;
+    object-position: 50% 50%;
+    z-index:-1
+}
+
+/*SECOND SECTION*/
+.content-container{
+    display:grid;
+    align-items: center;
+    height:100vh;
+    padding:1rem;
+    background-color: #100f0f;
+}
+
+.appear {
+    animation:entrance 1s cubic-bezier(.17,.67,.29,.13) forwards;
+}
+
+@keyframes entrance{
+
+    90%{
+        background-color:#100f0f;
+    }
+    100%{
+       background-color: #eeddce;
+    }
+}
+
+.text-container{
+    display:grid;
+    font-family: 'Prata', serif;
+    letter-spacing: -2px;
+}
+
+.text{
+    display:flex;
+    justify-content: space-between;
+    margin:0;
+}
+
+h1{
+    margin:0.2rem;
+    color:#eeddce;
+}
+
+.change-color{
+    animation: textColor 1s ease forwards;
+    animation-delay:1s
+}
+
+@keyframes textColor{
+    100%{
+        color: #1a1919;
+    }
+}
+
+.image-container{
+    position:absolute;
+    left:52%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    opacity:0
+}
+
+.image-appear{
+    opacity:1;
+    animation: perfume 1s ease both;
+    animation-delay: 1.25s;
+}
+
+@keyframes perfume{
+    0%{
+        opacity:0;
+        transform: scale(0.2) translateX(-250%);
+    }
+}
+img{
+    width:350px;
+}
+
+.left, .right{
+    opacity:0;
+}
+
+.left-appear{
+    transform: translateX(0);
+    animation:left 1.25s ease;
+    opacity:1;
+}
+
+.right-appear{
+    transform: translateX(0);
+    animation:right 1.25s ease;
+    opacity:1;
+}
+
+@keyframes left{
+    0%{
+        opacity:0;
+        transform: translateX(-100%);
+    }
+    70%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes right{
+    0%{
+        opacity:0;
+        transform: translateX(100%);
+    }
+    70%{
+        transform: translateX(0);
+    }
+}
+
+
