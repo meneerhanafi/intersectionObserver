@@ -126,10 +126,10 @@ h1{
 
 .image-container{
     position:absolute;
-    left:52%;
+    left:50%;
     margin-right: -50%;
     transform: translateX(-50%);
-    opacity:0
+    opacity:0;
 }
 
 .image-appear{
@@ -145,7 +145,7 @@ h1{
     }
 }
 img{
-    width:350px;
+    width:225px;
 }
 
 .left, .right{
