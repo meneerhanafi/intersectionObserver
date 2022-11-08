@@ -138,7 +138,7 @@ h1{
 .image-appear{
     opacity:1;
     animation: perfume 1s cubic-bezier(.73,.15,.47,.72) both;
-    animation-delay: 1.25s;
+    animation-delay: 1s;
 }
 
 @keyframes perfume{
