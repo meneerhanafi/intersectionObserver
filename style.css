@@ -137,7 +137,7 @@ h1{
 
 .image-appear{
     opacity:1;
-    animation: perfume 1s ease both;
+    animation: perfume 1s cubic-bezier(.73,.15,.47,.72) both;
     animation-delay: 1.25s;
 }
 
@@ -145,6 +145,10 @@ h1{
     0%{
         opacity:0;
         transform: scale(0.2)
+    }
+
+    90%{
+        transform: scale(1.2)
     }
 }
 img{
